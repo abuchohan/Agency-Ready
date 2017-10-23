@@ -1,11 +1,81 @@
-
-html, body, ul, ol {
-
+// reset --
+html,
+body,
+ul,
+ol,
+li,
+form,
+fieldset,
+nav {
     margin: 0;
     padding: 0;
 }
 
+h1,
+h2,
+h3,
+h4,
+p {
+    margin-top: 0;
+}
+
+fieldset,
+img {
+    border: 0;
+}
+
+// end of reset --
+.skiplinks {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
 body {
-    border: 5px solid brown;
-    font-size: 1rem;
+    font-family: null;
+    margin-bottom: 100px
+}
+
+h1 {
+    text-align: center;
+}
+
+img {
+    display: block;
+    margin: auto;
+    width: 300px;
+    height: auto;
+}
+
+// navigation 
+nav {
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 10;
+    background-color: aqua;
+
+    ul {
+        list-style: none;
+        padding: 10px;
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    li {}
+
+    a {
+        text-decoration: none;
+        display: flex;
+        align-items: flex-start;
+
+    }
+    @media screen and (min-width: 426px) {
+        border: 2px solid red;
+    }
 }
