@@ -1,30 +1,11 @@
 // reset --
-html,
-body,
-ul,
-ol,
-li,
-form,
-fieldset,
-nav {
-    margin: 0;
-    padding: 0;
-}
+html,body,ul,ol,li,form,fieldset,nav {margin: 0;padding: 0;list-style: none;}
+h1,h2,h3,h4,p {margin-top: 0;}
+fieldset,img {border: 0;}
 
-h1,
-h2,
-h3,
-h4,
-p {
-    margin-top: 0;
-}
-
-fieldset,
-img {
-    border: 0;
-}
-
+// delete fieldset if not used
 // end of reset --
+// hiding skiplinks
 .skiplinks {
     position: absolute;
     left: -10000px;
@@ -34,48 +15,118 @@ img {
     overflow: hidden;
 }
 
-body {
-    font-family: null;
-    margin-bottom: 100px
+// backgrounds 
+.homepage {
+    background-image: url(Images/low_poly_bg.png);
+    background-repeat: no-repeat;
+    max-width: 100%;
 }
 
-h1 {
+body {
+    font-size: 16px; // add some more fonts
+    font-family: "Titillium Web";
+    margin: 1.5% 0 2.5% 0;
+    padding-bottom: 2%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.top {
     text-align: center;
 }
+.page-content {
+    padding: 0 5% 30px 5%;
+    margin: 0 auto;
+    @media screen and (min-width: 1280px) {
+        max-width: 850px;
 
-img {
+    }
+}
+
+.mainlogo {
     display: block;
     margin: auto;
     width: 300px;
     height: auto;
 }
 
-// navigation 
-nav {
-    overflow: hidden;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    z-index: 10;
-    background-color: aqua;
+.intro-content {
+    background-color: rgba(255, 0, 0, 0.3);
+    padding: 10px;
 
-    ul {
-        list-style: none;
-        padding: 10px;
-        text-align: center;
+}
+
+.intro-text {
+    text-align: left;
+
+}
+
+// navigation
+// mobile navigation
+@media screen and (max-width: 426px) {
+    .nav-main {
+        margin-top: 20px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-color: lightcoral;
+        z-index: 1;
         display: flex;
-        flex-wrap: wrap;
         justify-content: space-around;
-    }
-    li {}
 
-    a {
-        text-decoration: none;
+
+        li {
+            display: flex;
+        }
+
+        a {
+            text-decoration: none;
+            justify-content: space-between;
+        }
+
+        .nav-logo {
+            display: none;
+        }
+    }
+}
+
+// tablet/desktop navigation
+@media screen and (min-width: 427px) {
+    .nav-main {
+        border: 1px solid blue;
         display: flex;
-        align-items: flex-start;
+        margin: 0 10%;
+        padding-bottom: 20px;
 
+
+        li:first-child {
+            margin-right: auto;
+        }
+
+        a {
+            display: block;
+            margin: 10px;
+            padding: 15px 15px 9px 15px;
+            text-decoration: none;
+            &:hover {
+                border-bottom: 1px solid black;
+            }
+        }
+
+        .nav-logo {
+            float: left;
+        }
     }
-    @media screen and (min-width: 426px) {
-        border: 2px solid red;
+
+    @media screen and (min-width: 1025px) {
+        .nav-main {
+            margin: auto;
+            border: 1px solid red;
+            max-width: 1000px;
+        }
     }
+
 }
