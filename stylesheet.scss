@@ -1,11 +1,18 @@
 // reset --
 html,body,ul,ol,li,form,fieldset,nav {margin: 0;padding: 0;list-style: none;}
 h1,h2,h3,h4,p {margin-top: 0;}
-fieldset,img {border: 0;}
+img {border: 0;}
 
-// delete fieldset if not used
-// end of reset --
-// hiding skiplinks
+//--------------------------------------------------
+
+// giving everything relative size
+*,
+::before,
+*::after { 
+  box-sizing: border-box;
+}
+
+// hididng skiplinks
 .skiplinks {
     position: absolute;
     left: -10000px;
@@ -15,118 +22,434 @@ fieldset,img {border: 0;}
     overflow: hidden;
 }
 
-// backgrounds 
-.homepage {
-    background-image: url(Images/low_poly_bg.png);
-    background-repeat: no-repeat;
-    max-width: 100%;
-}
+//--------------------------------------------------
+
+// getting font
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+
+// seting variables to colours
+
+
+$accent: rgba(245, 196, 83, 1);
+$text: rgba(66, 69, 70, 1);
+$background: rgba(255, 255, 255, 1);
+
+//--------------------------------------------------
 
 body {
-    font-size: 16px; // add some more fonts
-    font-family: "Titillium Web";
-    margin: 1.5% 0 2.5% 0;
-    padding-bottom: 2%;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    overflow: hidden;
+    font-size: 1rem; // 1rem === 16px   
+    font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial sans-serif;
+    border: 8px solid $text;
 }
 
-.top {
-    text-align: center;
-}
 .page-content {
-    padding: 0 5% 30px 5%;
-    margin: 0 auto;
-    @media screen and (min-width: 1280px) {
-        max-width: 850px;
-
-    }
+    margin: 5vh 5% 20vh 5%;
+    // max-width: 850px;
+    // @media screen and (min-width: 860px) {
+    //     margin: 5vh auto 20vh auto;
+    // }
 }
 
-.mainlogo {
-    display: block;
-    margin: auto;
-    width: 300px;
+img {
+    max-width: 100%;
     height: auto;
 }
 
+p,
+    {
+    color: $text;
+    font-size: 1rem
+}
+
+h1 {
+    font-size: 2rem;
+    margin: 60px auto 0 auto;
+    color: text;
+    text-align: center;
+    max-width: 850px; // text-shadow: 3px 2px 3px #333;
+    @media screen and (max-width: 337px) {
+        font-size: 1.8rem;
+    }
+    @media screen and (min-width: 500px) {
+        font-size: 2rem;
+    }
+    @media screen and (min-width: 1000px) {
+        font-size: 3rem;
+    }
+}
+
+h3 {
+    text-align: center;
+}
+
+//--------------------------------------------------
+
+// backgrounds
+
+.homepage {
+    background: linear-gradient(
+    rgba(255, 255, 255, 0.75)
+    rgba(255, 255, 255, 0.75) ),
+    url(images/lowPolyImage.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.about {
+    background-image: linear-gradient(
+    rgba(255, 255, 255, 0.75)
+    rgba(255, 255, 255, 0.75) ),
+    url(images/test-selfie-image.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+//--------------------------------------------------
+
+
 .intro-content {
-    background-color: rgba(255, 0, 0, 0.3);
-    padding: 10px;
+    max-width: 850px;
+    height: 40vh;
+    margin: 10vh auto 0 auto;
 
+    font-size: 1.2rem;
+    p {
+        text-align: left;
+        background: rgba(234, 234, 234, 0.85);
+        border-radius: 3px;
+        padding: 20px;
+    }
 }
 
-.intro-text {
-    text-align: left;
-
+.social-media-icons {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 425px;
+    margin: 0 auto;
 }
+
+//--------------------------------------------------
+
+.blog {
+    margin: 6vh auto 0 auto;
+    max-width: 850px;
+    p {
+        padding-bottom: 10px;
+    }
+    img {
+        display: block;
+        margin: 0 auto 20px auto;
+    }
+}
+
 
 // navigation
-// mobile navigation
-@media screen and (max-width: 426px) {
-    .nav-main {
-        margin-top: 20px;
+
+// mobile nav (ask derren why display:none on nav-logo doesnt work)
+
+.nav-main {
+    a {
+        text-decoration: none;
+        font-size: 1.2rem;
+    }
+
+    @media screen and (max-width: 426px) {
         position: fixed;
         bottom: 0;
+        left: 0;
         width: 100%;
-        background-color: lightcoral;
+        background-color: $text;
         z-index: 1;
         display: flex;
         justify-content: space-around;
 
-
         li {
             display: flex;
         }
-
-        a {
-            text-decoration: none;
-            justify-content: space-between;
-        }
-
         .nav-logo {
             display: none;
         }
+
+        a {
+            justify-content: space-between;
+            padding: 15px 0;
+            color: $background;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
     }
-}
 
-// tablet/desktop navigation
-@media screen and (min-width: 427px) {
-    .nav-main {
-        border: 1px solid blue;
+    // desktop nav
+    @media screen and (min-width: 427px) {
+        max-width: 850px;
+        margin: 1% auto 20px auto;
         display: flex;
-        margin: 0 10%;
-        padding-bottom: 20px;
-
-
+        color: $text;
         li:first-child {
             margin-right: auto;
         }
-
         a {
+            padding: 20px 20px 10px 20px;
             display: block;
-            margin: 10px;
-            padding: 15px 15px 9px 15px;
-            text-decoration: none;
-            &:hover {
-                border-bottom: 1px solid black;
+            position: relative;
+            &:visited {
+                color: $text
+            } // hover animation
+            &:before {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                bottom: 0;
+                left: 0;
+                background-color: $text;
+                visibility: hidden;
+                transform: scaleX(0);
+                transition: all 0.3s ease-in-out 0s;
+            }
+
+            &:hover:before {
+                visibility: visible;
+                transform: scaleX(1);
             }
         }
-
         .nav-logo {
             float: left;
+
         }
     }
-
-    @media screen and (min-width: 1025px) {
-        .nav-main {
-            margin: auto;
-            border: 1px solid red;
-            max-width: 1000px;
-        }
-    }
-
 }
+
+//--------------------------------------------------
+
+
+// portfolio grid
+
+.projects .item {
+    min-width: 100vw;
+    min-height: 385px;
+    margin-bottom: 20px;
+}
+
+
+
+
+.portfolio-work {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 50px auto;
+    padding: 0;
+    max-width: 1440px;
+
+    h3 {
+        margin:0;
+        color: grey;
+        font-size: 1.25rem;
+        font-weight: 300;
+        letter-spacing: 2px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    .tiles {
+
+        padding: 10px;
+        display: flex;
+        @media(min-width: 500px) {
+            width: 50%;
+        }
+        @media(min-width: 1000px) {
+            width: 33.3333%;
+        }
+    }
+
+    .tile {
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+    img {
+        height: auto;
+        max-width: 100%;
+        vertical-align: middle;
+    }
+
+    .portfolio-image {
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        overflow: hidden;
+        position: relative;
+    }
+}
+
+//--------------------------------------------------
+
+// blog cards
+
+.blog-cards {
+  
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0 auto    ;
+  padding: 0;
+  max-width: 1440px;
+  h2 {
+    margin: 0 auto;
+    text-align: center;
+  }
+  h3 {
+  color: $text;
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-align: center;
+  padding-top: 20px ;
+}
+  .blog-cards-outer {
+  display: flex;
+  padding-bottom: 20px;
+  @media(min-width: 500px) {
+    width: 50%;
+    padding: 10px;
+  }
+  @media(min-width: 1000px) {
+    width: 33.3333%;
+
+  }
+}
+
+.blog-card {
+  background-color: white;
+  border-radius: 0.25rem;
+  box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);
+  display: flex;
+  margin-top: 20px;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid lightgrey;
+  &:hover {
+    .card__image {
+      filter: contrast(100%);
+    }
+  }
+}
+  img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+button {
+  background-color: white;
+  border: 1px solid lightgrey;
+  padding: 0.5rem;
+  text-transform: lowercase;
+  display: block;
+  width: 100%;
+}
+.card-content {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  padding: 20px;
+}
+.blog-image {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+}
+
+.blog-taste{
+  flex: 1 1 auto;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+}
+.blog-date {
+    font-style: italic;
+    font-size: 0.8rem;
+    color: $accent;
+    text-align: center;
+    &:before {
+        content: "Date written - ";
+    }
+} }
+
+form {
+  padding: 30px;
+   max-width: 850px;
+   text-align: center;
+   margin: 20px auto;
+  
+  input, textarea {
+     border:0; outline:0;
+     padding: 1em;
+     display: block;
+     width: 100%;
+     margin-top: 20px;
+     font-family: 'Merriweather', sans-serif;
+     resize: none;
+    
+    &:focus {
+       box-shadow: (0 0 5px $accent);
+    }
+  }
+  
+  .form-submit {
+     color: $text; 
+    background: $accent;
+     cursor: pointer;
+    
+    &:hover {
+       box-shadow:(0 1px 1px 1px rgba(#aaa, 0.6)); 
+    }
+  }
+  
+  textarea {
+      height: 164px;
+  }
+}
+
+
+.half {
+  float: left;
+  width: 48%;
+  margin-bottom: 1em;
+}
+
+.form-right { width: 50%;
+float: right;}
+
+.form-left{
+     margin-right: 2%; 
+}
+
+
+@media (max-width: 480px) {
+  .half, .form-right {
+     width: 100%; 
+     float: none;
+     margin-bottom: 0; 
+  }
+}
+
+
+/* Clearfix */
+form:before,
+form:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+form:after {
+    clear: both;
+} 
