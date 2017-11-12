@@ -31,6 +31,8 @@ body {
 
 .page-content {
   margin: 5vh 5% 20vh 5%; }
+  .page-content span {
+    color: #e09d13; }
 
 img {
   max-width: 100%;
@@ -59,6 +61,40 @@ h1 {
 h3 {
   text-align: center; }
 
+.page-footer {
+  background: #e09d13; }
+  @media screen and (max-width: 426px) {
+    .page-footer {
+      margin-bottom: 45px; } }
+
+.bottom-nav {
+  margin: 30px 0 5px 0;
+  padding: 40px auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #424546;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  .bottom-nav a {
+    color: #424546;
+    padding: 15px 20px 0 20px;
+    display: block;
+    text-decoration: none; }
+  @media screen and (max-width: 426px) {
+    .bottom-nav {
+      display: none; } }
+
+.disclaimer {
+  text-align: center; }
+  .disclaimer p {
+    padding: 10px;
+    font-size: 0.8rem;
+    margin: 0; }
+
 .homepage {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.75))), url(images/lowPolyImage.jpg);
   background: -webkit-linear-gradient(rgba(255, 255, 255, 0.75) rgba(255, 255, 255, 0.75)), url(images/lowPolyImage.jpg);
@@ -67,6 +103,21 @@ h3 {
   background-position: center;
   background-attachment: fixed;
   background-size: cover; }
+  .homepage .page-content h1 {
+    margin: 100px auto 80px auto; }
+  .homepage .button-icons {
+    margin-top: 30vh; }
+
+.contact-button {
+  color: #424546;
+  background: #e09d13;
+  font-size: 1.2rem;
+  display: block;
+  text-align: center;
+  max-width: 200px;
+  padding: 15px;
+  text-decoration: none;
+  margin: 60px auto 0 auto; }
 
 .about {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.75))), url(images/test-selfie-image.jpg);
@@ -77,17 +128,6 @@ h3 {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover; }
-
-.intro-content {
-  max-width: 850px;
-  height: 40vh;
-  margin: 10vh auto 0 auto;
-  font-size: 1.2rem; }
-  .intro-content p {
-    text-align: left;
-    background: rgba(234, 234, 234, 0.85);
-    border-radius: 3px;
-    padding: 20px; }
 
 .social-media-icons {
   display: -webkit-box;
@@ -115,6 +155,11 @@ h3 {
   .blog img {
     display: block;
     margin: 0 auto 20px auto; }
+
+.about-me-intro {
+  padding: 20px;
+  max-width: 850px;
+  margin: 0 auto; }
 
 .nav-main a {
   text-decoration: none;
@@ -154,8 +199,9 @@ h3 {
 
 @media screen and (min-width: 427px) {
   .nav-main {
-    max-width: 850px;
+    max-width: 890px;
     margin: 1% auto 20px auto;
+    padding: 0 20px;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -209,14 +255,18 @@ h3 {
   margin: 50px auto;
   padding: 0;
   max-width: 1440px; }
-  .portfolio-work h3 {
-    margin: 0;
-    color: grey;
-    font-size: 1.25rem;
+  .portfolio-work h2 {
+    color: #424546;
     font-weight: 300;
-    letter-spacing: 2px;
-    text-align: center;
-    text-transform: uppercase; }
+    letter-spacing: 1px;
+    padding-top: 10px;
+    margin: 0 auto 6px auto;
+    text-align: cneter; }
+  .portfolio-work .project-date {
+    font-style: italic;
+    font-size: 0.75rem;
+    color: #e09d13;
+    text-align: center; }
   .portfolio-work .tiles {
     padding: 10px;
     display: -webkit-box;
@@ -349,17 +399,18 @@ h3 {
   .blog-cards .blog-date {
     font-style: italic;
     font-size: 0.8rem;
-    color: #f5c453;
+    color: #e09d13;
     text-align: center; }
     .blog-cards .blog-date:before {
       content: "Date written - "; }
 
 form {
-  padding: 30px;
+  padding: 60px;
   max-width: 850px;
   text-align: center;
-  margin: 20px auto; }
-  form input, form textarea {
+  margin: 20px auto 30px auto; }
+  form input,
+  form textarea {
     border: 0;
     outline: 0;
     padding: 1em;
@@ -368,12 +419,13 @@ form {
     margin-top: 20px;
     font-family: 'Merriweather', sans-serif;
     resize: none; }
-    form input:focus, form textarea:focus {
-      -webkit-box-shadow: 0 0 5px #f5c453;
-      box-shadow: 0 0 5px #f5c453; }
+    form input:focus,
+    form textarea:focus {
+      -webkit-box-shadow: 0 0 5px #e09d13;
+      box-shadow: 0 0 5px #e09d13; }
   form .form-submit {
     color: #424546;
-    background: #f5c453;
+    background: #e09d13;
     cursor: pointer; }
     form .form-submit:hover {
       -webkit-box-shadow: 0 1px 1px 1px rgba(170, 170, 170, 0.6);
@@ -394,7 +446,8 @@ form {
   margin-right: 2%; }
 
 @media (max-width: 480px) {
-  .half, .form-right {
+  .half,
+  .form-right {
     width: 100%;
     float: none;
     margin-bottom: 0; } }

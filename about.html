@@ -3,9 +3,9 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Abu-Hurairah Chohan | Portfolio</title>
-    <meta name="description" content="This is a page to display all the previous/current projects i have done.">
-    <meta name="keywords" content="portfolio, web, developer, student, graduate, portfoliom final year, work">
+    <title>Abu-Hurairah Chohan | About Me </title>
+    <meta name="description" content="I will tell you about my career aspirations and my previous experiences. I also provide you with my curriculum vitae and there is a form if you wish to contact me">
+    <meta name="keywords" content="portfolio, web, developer, student, graduate, aspirations, experiences, contact me">
     <meta name="author" content="Abu-Hurairah Chohan">
     <meta name="geo.placename" content="Manchester, UK" />
     <meta name="geo.position" content="53.4807590;-2.2426310" />
@@ -14,8 +14,11 @@
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="icon" type="image/icon" href="images/favIcons/favicon.ico" />
 </head>
-
-<body>
+    
+<body class="about">
+      
+<!-- Skiplinks -->
+<p class="skiplinks"> <a href="#content">Skip to content</a> <a href="#navigation">Skip to navigation</a> </p>
     
 <!-- Navagation -->
 <nav role="navigation" id="navigation">
@@ -27,42 +30,31 @@
         <li><a href="about.html" title="My career aspirations and experiences.">About</a></li>
     </ul>
 </nav>
-    
+      
 <!-- Body Content -->
 <main class="page-content" id="content" role="main">
-    <h1> Portfolio </h1>
-    <div class="portfolio-work">
-        <div class="tiles">
-            <div class="tile">
-                <a href=""><img class="blog-image" src="images/portfolio-items/javascriptof.jpg" width="800" height="600" alt="the letters J and S and the words order form"></a>
-                <h2> Javascript Form </h2>
-                <p class="project-date">March 1st 2017</p>
+    <h1> About </h1>
+
+    <p class="about-me-intro">Drop me a message. Drop me a message.Drop me a message. Drop me a message.Drop me a message.Drop me a message.Drop me a message.Drop me a message.Drop me a message.Drop me a message.Drop me a message.Drop me a message.Drop me a message.Drop me a message.Drop me a message.Drop me a message.Drop me a message.</p>
+
+    <a class="contact-button" href="https://docs.google.com/document/d/e/2PACX-1vReTlrVuDJPQb6G8CLWwsGI5a88lCtrS4qt4335eDrTYmz7qB4jdoPNkyeZiff1EaFINSF8TInEfD1d/pub">Curriculum Vitae</a>
+
+    <form id="contact-form" method="POST" action="http://formspree.io/abuchohan@hotmail.co.uk">
+        <h2> Like what you see? Drop me a message. </h2>
+        <div class="half">
+            <div class="form-left">
+                <input type="text" name="Name" class="input-name" placeholder="Name">
+                <input type="email" name="Email" class="input-email" placeholder="Email address">
+                <input type="text" name="Subject" class="input-subject" placeholder="Subject">
             </div>
         </div>
-        <div class="tiles">
-            <div class="tile">
-                <a href=""><img class="blog-image" src="images/portfolio-items/old-portfolio.jpg" width="800" height="600" alt="a screen grab of my old portfolio"></a>
-                <h2> My First Portfolio </h2>
-                <p class="project-date">March 1st 2017</p>
-            </div>
+        <div class="form-right">
+            <textarea class="form-message" name="Message" placeholder="Your message here"></textarea>
         </div>
-        <div class="tiles">
-            <div class="tile">
-                <a href=""><img class="blog-image" src="images/portfolio-items/studentsearch.jpg" width="800" height="600" alt="a logo for the project i did"></a>
-                <h2> Project: Student Guide </h2>
-                <p class="project-date">March 1st 2017</p>
-            </div>
-        </div>
-        <div class="tiles">
-            <div class="tile">
-                <a href=""><img class="blog-image" src="images/portfolio-items/javascriptE.jpg" width="800" height="600" alt="letters J and S and the work encryptor"></a>
-                <h2> Project: Student Guide </h2>
-                <p class="project-date">March 1st 2017</p>
-            </div>
-        </div>        
-    </div>
+        <input class="form-submit" type="submit" value="Submit">
+    </form>
 </main>
-    
+      
 <!-- Footer -->
 <footer class="page-footer" role="contentinfo">
     <ul class="bottom-nav">
@@ -76,6 +68,6 @@
         <p>&copy; <a href="http://www.mmu.ac.uk/" title="MMU homepage">MMU 2017</a> | THIS IS STUDENT COURSEWORK | TUTOR <a href="mailto:r.eskins@mmu.ac.uk">Richard Eskins</a> | <a href="http://validator.w3.org/check?uri=referer" title="W3C HTML Validation Service">Valid HTML</a> </p>
     </div>
 </footer>
-
+    
 </body>
 </html>

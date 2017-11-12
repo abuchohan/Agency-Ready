@@ -8,8 +8,8 @@ img {border: 0;}
 // giving everything relative size
 *,
 ::before,
-*::after { 
-  box-sizing: border-box;
+*::after {
+    box-sizing: border-box;
 }
 
 // hididng skiplinks
@@ -29,13 +29,11 @@ img {border: 0;}
 
 // seting variables to colours
 
-
-$accent: rgba(245, 196, 83, 1);
+$accent: rgba(224, 157, 19, 1);
 $text: rgba(66, 69, 70, 1);
 $background: rgba(255, 255, 255, 1);
 
 //--------------------------------------------------
-
 body {
     font-size: 1rem; // 1rem === 16px   
     font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial sans-serif;
@@ -44,10 +42,9 @@ body {
 
 .page-content {
     margin: 5vh 5% 20vh 5%;
-    // max-width: 850px;
-    // @media screen and (min-width: 860px) {
-    //     margin: 5vh auto 20vh auto;
-    // }
+    span {
+        color: $accent;
+    }
 }
 
 img {
@@ -82,47 +79,82 @@ h3 {
     text-align: center;
 }
 
+.page-footer {
+    background: $accent;
+    @media screen and (max-width: 426px) {
+        margin-bottom: 45px;
+    }
+
+}
+
+.bottom-nav {
+    margin: 30px 0 5px 0;
+    padding: 40px auto;
+    display: flex;
+    color: $text;
+    justify-content: center;
+    a {
+        color: $text;
+        padding: 15px 20px 0 20px;
+        display: block;
+        text-decoration: none;
+    }
+    @media screen and (max-width: 426px) {
+        display: none;
+    }
+}
+
+.disclaimer {
+
+    text-align: center;
+    p {
+        padding: 10px;
+        font-size: 0.8rem;
+        margin: 0;
+    }
+}
 //--------------------------------------------------
 
 // backgrounds
-
 .homepage {
-    background: linear-gradient(
-    rgba(255, 255, 255, 0.75)
-    rgba(255, 255, 255, 0.75) ),
+    background: linear-gradient( rgba(255, 255, 255, 0.75) rgba(255, 255, 255, 0.75)),
     url(images/lowPolyImage.jpg);
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
+    .page-content h1 {
+        margin: 100px auto 80px auto;
+    }
+
+    .button-icons {
+        margin-top: 30vh;
+    }
 }
 
+
+.contact-button {
+    color: $text;
+    background: $accent;
+    font-size: 1.2rem;
+    display: block;
+    text-align: center;
+    max-width: 200px;
+    padding: 15px;
+    text-decoration: none;
+    margin: 60px auto 0 auto;
+}
+
+
+
 .about {
-    background-image: linear-gradient(
-    rgba(255, 255, 255, 0.75)
-    rgba(255, 255, 255, 0.75) ),
+    background-image: linear-gradient( rgba(255, 255, 255, 0.75) rgba(255, 255, 255, 0.75)),
     url(images/test-selfie-image.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
 }
-
 //--------------------------------------------------
-
-
-.intro-content {
-    max-width: 850px;
-    height: 40vh;
-    margin: 10vh auto 0 auto;
-
-    font-size: 1.2rem;
-    p {
-        text-align: left;
-        background: rgba(234, 234, 234, 0.85);
-        border-radius: 3px;
-        padding: 20px;
-    }
-}
 
 .social-media-icons {
     display: flex;
@@ -132,7 +164,6 @@ h3 {
     max-width: 425px;
     margin: 0 auto;
 }
-
 //--------------------------------------------------
 
 .blog {
@@ -147,11 +178,16 @@ h3 {
     }
 }
 
+.about-me-intro {
+    padding: 20px;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
 
 // navigation
 
 // mobile nav (ask derren why display:none on nav-logo doesnt work)
-
 .nav-main {
     a {
         text-decoration: none;
@@ -183,12 +219,11 @@ h3 {
                 text-decoration: underline;
             }
         }
-    }
-
-    // desktop nav
+    } // desktop nav
     @media screen and (min-width: 427px) {
-        max-width: 850px;
+        max-width: 890px;
         margin: 1% auto 20px auto;
+        padding: 0 20px;
         display: flex;
         color: $text;
         li:first-child {
@@ -225,9 +260,7 @@ h3 {
         }
     }
 }
-
 //--------------------------------------------------
-
 
 // portfolio grid
 
@@ -248,14 +281,20 @@ h3 {
     padding: 0;
     max-width: 1440px;
 
-    h3 {
-        margin:0;
-        color: grey;
-        font-size: 1.25rem;
+    h2 {
+        color: $text;
         font-weight: 300;
-        letter-spacing: 2px;
+        letter-spacing: 1px;
+        padding-top: 10px;
+        margin: 0 auto 6px auto;
+        text-align: cneter;
+    }
+    .project-date {
+        font-style: italic;
+        font-size: 0.75rem;
+        color: $accent;
         text-align: center;
-        text-transform: uppercase;
+
     }
     .tiles {
 
@@ -295,161 +334,174 @@ h3 {
 // blog cards
 
 .blog-cards {
-  
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  margin: 0 auto    ;
-  padding: 0;
-  max-width: 1440px;
-  h2 {
+
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
     margin: 0 auto;
-    text-align: center;
-  }
-  h3 {
-  color: $text;
-  font-weight: 300;
-  letter-spacing: 1px;
-  text-align: center;
-  padding-top: 20px ;
-}
-  .blog-cards-outer {
-  display: flex;
-  padding-bottom: 20px;
-  @media(min-width: 500px) {
-    width: 50%;
-    padding: 10px;
-  }
-  @media(min-width: 1000px) {
-    width: 33.3333%;
-
-  }
-}
-
-.blog-card {
-  background-color: white;
-  border-radius: 0.25rem;
-  box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);
-  display: flex;
-  margin-top: 20px;
-  flex-direction: column;
-  overflow: hidden;
-  border: 1px solid lightgrey;
-  &:hover {
-    .card__image {
-      filter: contrast(100%);
+    padding: 0;
+    max-width: 1440px;
+    h2 {
+        margin: 0 auto;
+        text-align: center;
     }
-  }
-}
-  img {
-  height: auto;
-  max-width: 100%;
-  vertical-align: middle;
-}
-button {
-  background-color: white;
-  border: 1px solid lightgrey;
-  padding: 0.5rem;
-  text-transform: lowercase;
-  display: block;
-  width: 100%;
-}
-.card-content {
-  display: flex;
-  flex: 1 1 auto;
-  flex-direction: column;
-  padding: 20px;
-}
-.blog-image {
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  overflow: hidden;
-  position: relative;
+    h3 {
+        color: $text;
+        font-weight: 300;
+        letter-spacing: 1px;
+        text-align: center;
+        padding-top: 20px;
+    }
+    .blog-cards-outer {
+        display: flex;
+        padding-bottom: 20px;
+        @media(min-width: 500px) {
+            width: 50%;
+            padding: 10px;
+        }
+        @media(min-width: 1000px) {
+            width: 33.3333%;
+
+        }
+    }
+
+    .blog-card {
+        background-color: white;
+        border-radius: 0.25rem;
+        box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+        display: flex;
+        margin-top: 20px;
+        flex-direction: column;
+        overflow: hidden;
+        border: 1px solid lightgrey;
+        &:hover {
+            .card__image {
+                filter: contrast(100%);
+            }
+        }
+    }
+    img {
+        height: auto;
+        max-width: 100%;
+        vertical-align: middle;
+    }
+    button {
+        background-color: white;
+        border: 1px solid lightgrey;
+        padding: 0.5rem;
+        text-transform: lowercase;
+        display: block;
+        width: 100%;
+    }
+    .card-content {
+        display: flex;
+        flex: 1 1 auto;
+        flex-direction: column;
+        padding: 20px;
+    }
+    .blog-image {
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .blog-taste {
+        flex: 1 1 auto;
+        font-size: 0.875rem;
+        line-height: 1.5;
+        margin-bottom: 1.25rem;
+    }
+    .blog-date {
+        font-style: italic;
+        font-size: 0.8rem;
+        color: $accent;
+        text-align: center;
+        &:before {
+            content: "Date written - ";
+        }
+    }
 }
 
-.blog-taste{
-  flex: 1 1 auto;
-  font-size: 0.875rem;
-  line-height: 1.5;
-  margin-bottom: 1.25rem;
-}
-.blog-date {
-    font-style: italic;
-    font-size: 0.8rem;
-    color: $accent;
-    text-align: center;
-    &:before {
-        content: "Date written - ";
-    }
-} }
+//--------------------------------------------------
+
+// contact me form
 
 form {
-  padding: 30px;
-   max-width: 850px;
-   text-align: center;
-   margin: 20px auto;
-  
-  input, textarea {
-     border:0; outline:0;
-     padding: 1em;
-     display: block;
-     width: 100%;
-     margin-top: 20px;
-     font-family: 'Merriweather', sans-serif;
-     resize: none;
-    
-    &:focus {
-       box-shadow: (0 0 5px $accent);
+    padding: 60px;
+    max-width: 850px;
+    text-align: center;
+    margin: 20px auto 30px auto;
+
+    input,
+    textarea {
+        border: 0;
+        outline: 0;
+        padding: 1em;
+        display: block;
+        width: 100%;
+        margin-top: 20px;
+        font-family: 'Merriweather', sans-serif;
+        resize: none;
+
+        &:focus {
+            box-shadow: (0 0 5px $accent);
+        }
     }
-  }
-  
-  .form-submit {
-     color: $text; 
-    background: $accent;
-     cursor: pointer;
-    
-    &:hover {
-       box-shadow:(0 1px 1px 1px rgba(#aaa, 0.6)); 
+
+    .form-submit {
+        color: $text;
+        background: $accent;
+        cursor: pointer;
+
+        &:hover {
+            box-shadow: (0 1px 1px 1px rgba(#aaa, 0.6));
+        }
     }
-  }
-  
-  textarea {
-      height: 164px;
-  }
+
+    textarea {
+        height: 164px;
+    }
 }
 
 
 .half {
-  float: left;
-  width: 48%;
-  margin-bottom: 1em;
+    float: left;
+    width: 48%;
+    margin-bottom: 1em;
 }
 
-.form-right { width: 50%;
-float: right;}
+.form-right {
+    width: 50%;
+    float: right;
+}
 
-.form-left{
-     margin-right: 2%; 
+.form-left {
+    margin-right: 2%;
 }
 
 
 @media (max-width: 480px) {
-  .half, .form-right {
-     width: 100%; 
-     float: none;
-     margin-bottom: 0; 
-  }
+    .half,
+    .form-right {
+        width: 100%;
+        float: none;
+        margin-bottom: 0;
+    }
 }
 
 
 /* Clearfix */
+
 form:before,
 form:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
+   content: " ";
+   /* 1 */
+   display: table;
+   /* 2 */
 }
 
 form:after {
-    clear: both;
-} 
+   clear: both;
+}
