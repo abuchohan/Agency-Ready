@@ -75,6 +75,18 @@ h1 {
     }
 }
 
+h2 {
+    @media screen and (max-width: 337px) {
+        font-size: 1.2rem;
+    }
+    @media screen and (min-width: 500px) {
+        font-size: 1.4rem;
+    }
+    @media screen and (min-width: 1000px) {
+        font-size: 2rem;
+    }
+}
+
 h3 {
     text-align: center;
 }
@@ -118,7 +130,7 @@ h3 {
 // backgrounds
 .homepage {
     background: linear-gradient( rgba(255, 255, 255, 0.75) rgba(255, 255, 255, 0.75)),
-    url(images/lowPolyImage.jpg);
+    url(images/backgrounds/lowPolyImage.jpg);
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
@@ -148,7 +160,7 @@ h3 {
 
 .about {
     background-image: linear-gradient( rgba(255, 255, 255, 0.75) rgba(255, 255, 255, 0.75)),
-    url(images/test-selfie-image.jpg);
+    url(images/backgrounds/test-selfie-image.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -175,6 +187,12 @@ h3 {
     img {
         display: block;
         margin: 0 auto 20px auto;
+    }
+    a {
+        color: $accent;
+    }
+    h3 {
+        text-align: left;
     }
 }
 
@@ -385,14 +403,18 @@ h3 {
         max-width: 100%;
         vertical-align: middle;
     }
-    button {
+            a {
+            text-decoration: none;
+    }
+    .button {
         background-color: white;
         border: 1px solid lightgrey;
         padding: 0.5rem;
-        text-transform: lowercase;
         display: block;
         width: 100%;
-    }
+        text-align: center;
+
+}
     .card-content {
         display: flex;
         flex: 1 1 auto;

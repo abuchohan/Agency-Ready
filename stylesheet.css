@@ -58,6 +58,18 @@ h1 {
     h1 {
       font-size: 3rem; } }
 
+@media screen and (max-width: 337px) {
+  h2 {
+    font-size: 1.2rem; } }
+
+@media screen and (min-width: 500px) {
+  h2 {
+    font-size: 1.4rem; } }
+
+@media screen and (min-width: 1000px) {
+  h2 {
+    font-size: 2rem; } }
+
 h3 {
   text-align: center; }
 
@@ -96,10 +108,10 @@ h3 {
     margin: 0; }
 
 .homepage {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.75))), url(images/lowPolyImage.jpg);
-  background: -webkit-linear-gradient(rgba(255, 255, 255, 0.75) rgba(255, 255, 255, 0.75)), url(images/lowPolyImage.jpg);
-  background: -o-linear-gradient(rgba(255, 255, 255, 0.75) rgba(255, 255, 255, 0.75)), url(images/lowPolyImage.jpg);
-  background: linear-gradient(rgba(255, 255, 255, 0.75) rgba(255, 255, 255, 0.75)), url(images/lowPolyImage.jpg);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.75))), url(images/backgrounds/lowPolyImage.jpg);
+  background: -webkit-linear-gradient(rgba(255, 255, 255, 0.75) rgba(255, 255, 255, 0.75)), url(images/backgrounds/lowPolyImage.jpg);
+  background: -o-linear-gradient(rgba(255, 255, 255, 0.75) rgba(255, 255, 255, 0.75)), url(images/backgrounds/lowPolyImage.jpg);
+  background: linear-gradient(rgba(255, 255, 255, 0.75) rgba(255, 255, 255, 0.75)), url(images/backgrounds/lowPolyImage.jpg);
   background-position: center;
   background-attachment: fixed;
   background-size: cover; }
@@ -120,10 +132,10 @@ h3 {
   margin: 60px auto 0 auto; }
 
 .about {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.75))), url(images/test-selfie-image.jpg);
-  background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.75) rgba(255, 255, 255, 0.75)), url(images/test-selfie-image.jpg);
-  background-image: -o-linear-gradient(rgba(255, 255, 255, 0.75) rgba(255, 255, 255, 0.75)), url(images/test-selfie-image.jpg);
-  background-image: linear-gradient(rgba(255, 255, 255, 0.75) rgba(255, 255, 255, 0.75)), url(images/test-selfie-image.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.75))), url(images/backgrounds/test-selfie-image.jpg);
+  background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.75) rgba(255, 255, 255, 0.75)), url(images/backgrounds/test-selfie-image.jpg);
+  background-image: -o-linear-gradient(rgba(255, 255, 255, 0.75) rgba(255, 255, 255, 0.75)), url(images/backgrounds/test-selfie-image.jpg);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.75) rgba(255, 255, 255, 0.75)), url(images/backgrounds/test-selfie-image.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -155,6 +167,10 @@ h3 {
   .blog img {
     display: block;
     margin: 0 auto 20px auto; }
+  .blog a {
+    color: #e09d13; }
+  .blog h3 {
+    text-align: left; }
 
 .about-me-intro {
   padding: 20px;
@@ -360,13 +376,15 @@ h3 {
     height: auto;
     max-width: 100%;
     vertical-align: middle; }
-  .blog-cards button {
+  .blog-cards a {
+    text-decoration: none; }
+  .blog-cards .button {
     background-color: white;
     border: 1px solid lightgrey;
     padding: 0.5rem;
-    text-transform: lowercase;
     display: block;
-    width: 100%; }
+    width: 100%;
+    text-align: center; }
   .blog-cards .card-content {
     display: -webkit-box;
     display: -webkit-flex;
