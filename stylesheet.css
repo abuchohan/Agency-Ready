@@ -131,16 +131,6 @@ h3 {
   text-decoration: none;
   margin: 60px auto 0 auto; }
 
-.about {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.75))), url(images/backgrounds/test-selfie-image.jpg);
-  background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.75) rgba(255, 255, 255, 0.75)), url(images/backgrounds/test-selfie-image.jpg);
-  background-image: -o-linear-gradient(rgba(255, 255, 255, 0.75) rgba(255, 255, 255, 0.75)), url(images/backgrounds/test-selfie-image.jpg);
-  background-image: linear-gradient(rgba(255, 255, 255, 0.75) rgba(255, 255, 255, 0.75)), url(images/backgrounds/test-selfie-image.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover; }
-
 .social-media-icons {
   display: -webkit-box;
   display: -webkit-flex;
