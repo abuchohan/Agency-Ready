@@ -52,16 +52,16 @@ img {
     height: auto;
 }
 
-p,
+p
     {
     color: $text;
-    font-size: 1rem
+    font-size: 1rem;
+    line-height: 1.5;
 }
 
 h1 {
     font-size: 2rem;
     margin: 60px auto 0 auto;
-    color: text;
     text-align: center;
     max-width: 850px; // text-shadow: 3px 2px 3px #333;
     @media screen and (max-width: 337px) {
@@ -172,6 +172,10 @@ h3 {
     max-width: 850px;
     p {
         padding-bottom: 10px;
+        a {
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
     }
     img {
         display: block;
@@ -184,11 +188,7 @@ h3 {
         text-align: left;
         font-size: 1.1rem;
     }
-    figure {
-        text-align: center;
-        font-size: 0.8rem;
-        padding-bottom: 20px;
-    }
+    
 }
 
 .about-me-intro {
@@ -434,7 +434,7 @@ h3 {
     .blog-date {
         font-style: italic;
         font-size: 0.8rem;
-        color: $accent;
+        color: $accent; 
         text-align: center;
         &:before {
             content: "Date written - ";
