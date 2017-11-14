@@ -193,6 +193,12 @@ h3 {
     }
     h3 {
         text-align: left;
+        font-size: 1.1rem;
+    }
+    figure {
+        text-align: center;
+        font-size: 0.8rem;
+        padding-bottom: 20px;
     }
 }
 
@@ -251,6 +257,7 @@ h3 {
             padding: 20px 20px 10px 20px;
             display: block;
             position: relative;
+            color: $text;
             &:visited {
                 color: $text
             } // hover animation
@@ -413,7 +420,7 @@ h3 {
         display: block;
         width: 100%;
         text-align: center;
-
+        color: $text;
 }
     .card-content {
         display: flex;
@@ -458,6 +465,7 @@ form {
 
     input,
     textarea {
+            box-shadow: (0 0.5px 0.5px 0.5px $accent);
         border: 0;
         outline: 0;
         padding: 1em;
@@ -484,6 +492,7 @@ form {
 
     textarea {
         height: 164px;
+
     }
 }
 
